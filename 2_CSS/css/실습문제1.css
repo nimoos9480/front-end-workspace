@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightsalmon;
+    background: linear-gradient(purple, pink);
+    height: 100vh; /* 그라디언트 주려면 배경의 height값을 정해줘야 함 */
+    padding: 50px;
+}
+
+.profile-card {
+    width: 340px;
+    /* background-color: white; */
+    margin : 0 auto; /* 좌/우 값을 auto : 가운데 정렬*/
+    border-radius: 20px; 
+    position: relative; 
+    text-align: center;  
+    padding: 20px 5px;
+}
+
+.profile-card__main {
+    padding-top: 20px;    
+    margin-bottom: 20px;
+}
+
+.profile-card__main img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-card__main h1 {
+    font-size: 1rem;
+    color: #666;
+    color: white;
+}
+
+.profile-card__list a {
+    display: block;
+    text-decoration: none;
+    /* background-color: lightsalmon; */
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+
