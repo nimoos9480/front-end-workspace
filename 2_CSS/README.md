@@ -910,7 +910,7 @@ hsl(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 
 ## flex-basis
 
-- flex 아이템의 기본 크기 설정 (flex-direction이 row일 때는 너비, cloumn일 때는 높이)
+- flex 아이템의 기본 크기 설정 (flex-direction이 row일 때는 너비, column일 때는 높이)
 
 ```css
 item {
