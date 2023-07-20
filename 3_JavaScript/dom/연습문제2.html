@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>올해 남은 시간</title>
+</head>
+<body>
+    <h1>올해 남은 시간</h1>
+    <h2 class="clock"></h2>
+
+    <script>
+        const clock = document.querySelector(".clock");
+
+        function dDay() {
+            const date = new Date();
+            const lastDay = new Date("2024-01-01 00:00:00");
+            console.log(lastDay - date);
+
+            const diffDay = lastDay - date; 
+        
+            //며칠 남았는지? (나머지는 버림)
+            const resultDay = Math.floor(diffDay / (1000 * 60 * 60 * 24));
+            console.log(resultDay);
+            //몇시간 남았는지?
+            const resultHour = Math.floor(diffDay / (1000 * 60 * 60)) % 24;
+            console.log(resultHour);
+            //몇분 남았는지?
+            const resultMin = Math.floor(diffDay / (1000 * 60)) % 60;
+            console.log(resultMin);
+            //몇초 남았는지?
+            const resultSec = Math.floor((diffDay / 1000) % 60);
+            console.log(resultSec);
+
+            clock.innerText = `${resultDay}d ${resultHour}h ${resultMin}m ${resultSec}s 남음`;
+        }
+        
+        setInterval(dDay, 1000);
+
+
+    </script>
+</body>
+</html>
