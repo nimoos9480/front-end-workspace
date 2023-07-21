@@ -10,12 +10,14 @@ body {
 }
 
 .square {
-    width: 10px;
-    height: 50px;
+    width: 70px;
+    height: 120px;
     background-image: url('../../resources/grid8.jpg');
     /* background-color: white; */
+    background-size: cover;
+    background-position: center;
     margin: 3px;
-    border-radius: 10px; 
+    border-radius: 60px; 
     animation: squareScale 1s linear infinite;
 }
 
