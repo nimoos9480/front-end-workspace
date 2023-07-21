@@ -21,16 +21,16 @@
         
             //며칠 남았는지? (나머지는 버림)
             const resultDay = Math.floor(diffDay / (1000 * 60 * 60 * 24));
-            console.log(resultDay);
+
             //몇시간 남았는지?
             const resultHour = Math.floor(diffDay / (1000 * 60 * 60)) % 24;
-            console.log(resultHour);
+
             //몇분 남았는지?
             const resultMin = Math.floor(diffDay / (1000 * 60)) % 60;
-            console.log(resultMin);
+
             //몇초 남았는지?
             const resultSec = Math.floor((diffDay / 1000) % 60);
-            console.log(resultSec);
+
 
             clock.innerText = `${resultDay}d ${resultHour}h ${resultMin}m ${resultSec}s 남음`;
         }
