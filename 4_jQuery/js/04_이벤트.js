@@ -95,3 +95,39 @@ $('#textarea2').on('keyup', function(e) {
     }
 });
 
+// 3. 아이디 조건 확인
+// 사용 가능한 아이디입니다.
+// 사용 불가능한 아이디입니다.
+
+$('#userId').on('keyup', function(e) {
+    const userId = $(e.target).val();
+    const regExp = /^[a-z][a-z0-9]{4,12}$/;
+
+    if(regExp.test(userId)) {
+        $('#idCheck').text("사용 가능한 아이디입니다.").css('color', 'green');
+    } else if(userId === "") {
+        $('#idCheck').text("");
+    } else {
+        $('#idCheck').text("사용 불가능한 아이디입니다.").css('color', 'red');
+    }  
+});
+
+// 3. trigger() 메소드
+
+// 1) area3영역을 눌렀을 때 넘버값 올리기
+// let num = 0; // 안에 있으면 클릭할 때마다 0으로 초기화되니까 밖으로 빼줘야 함
+// $('#area3').on('click', function() {
+//     $('#counter2').text(++num);
+// });
+
+// 1-2) 한번에 처리
+$('#area3').on('click', function() {
+    let currentCount = parseInt($('#counter2').text()); // 현재 0
+    $('#counter2').text(++currentCount);
+});
+
+// 2) 실행 확인 버튼 눌렀을 때 올리기
+$('#btn').on('click', function() {
+    $('#area3').trigger('click');
+});
+
