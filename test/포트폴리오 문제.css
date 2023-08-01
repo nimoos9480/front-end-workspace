@@ -1,0 +1,38 @@
+div {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+fieldset {
+  width: 1000px;
+}
+
+label {
+  font-weight: bold;
+}
+
+textarea {
+  position: inline-block;
+}
+#button {
+  margin-top: 20px;
+  margin-left: 120px;
+}
+
+table {
+  background-color: lightyellow;
+}
+
+table #top {
+  background-color: lightsalmon;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+table #bottom {
+  background-color: lightsalmon;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
