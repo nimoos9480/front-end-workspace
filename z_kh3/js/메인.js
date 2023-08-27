@@ -1,85 +1,64 @@
-// console.log("!!");
-
-let maxScrollValue;
-const progressBar = document.querySelector(`.progress-bar`);
-
-function resizeHandler() {
-    maxScrollValue = document.body.offsetHeight - window.innerHeight;
-    // 전체 스크롤 할 수 있는 범위 = 바디 전체 높이 - 윈도우 현재 창의 높이
-}
-
-window.addEventListener('scroll', function(){
-    // console.log((window.scrollY / maxScrollValue)*100);
-    progressBar.style.width = (window.scrollY / maxScrollValue) * 100 + '%';
-    // console.log(window.pageXOffset); //deprecated
-    // console.log(window.scrollY);
-    // console.log(document.body.offsetHeight);
-    // console.log(window.innerHeight);
-
-});
-
-window.addEventListener('resize', resizeHandler);
+window.addEventListener("resize", resizeHandler);
 resizeHandler();
 
-
 // navigation click event
-const nav = document.querySelector('nav');
+const nav = document.querySelector(".menu");
 let currentNav;
 
 function navHandler(e) {
-
-    if(currentNav) {
-        currentNav.style.backgroundColor = 'transparent';
-        currentNav.style.color = 'black';
-    }
-    if(e.target!==e.currentTarget) {
-        console.log(e.target);
-        e.target.style.backgroundColor = 'black';
-        e.target.style.color = 'white';
-        currentNav = e.target;
-    }
-    
+  if (currentNav) {
+    currentNav.style.backgroundColor = "transparent";
+    currentNav.style.color = "#ff5e33";
+  }
+  if (e.target !== e.currentTarget) {
+    console.log(e.target);
+    e.target.style.backgroundColor = "#ff5e33";
+    e.target.style.color = "white";
+    currentNav = e.target;
+  }
 }
 
-nav.addEventListener('click', navHandler);
+nav.addEventListener("click", navHandler);
 
-// mouse wheel event 
-const section1 = document.querySelector('#section1');
-const section2 = document.querySelector('#section2');
-const section3 = document.querySelector('#section3');
+// mouse wheel event
+const section1 = document.querySelector("#section1");
+const login = document.querySelector("#login");
+const register = document.querySelector("#register");
 
 let currentSection = section1;
-window.addEventListener('wheel', function(event){
-    if(event.deltaY > 0) { // 휠을 아래로 내린 경우
-        if(currentSection === section1) {
-            window.scrollTo({top:section2.offsetTop, behavior:"smooth"});
-            currentSection = section2;
-        } else if(currentSection === section2) {
-            window.scrollTo({top:section3.offsetTop, behavior:"smooth"});
-            currentSection = section3;
-        }
-    } else { // 휠을 위로 올린 경우
-        if(event.deltaY < 0) { // 휠을 아래로 내린 경우
-            if(currentSection === section3) {
-                window.scrollTo({top:section2.offsetTop, behavior:"smooth"});
-                currentSection = section2;
-            } else if(currentSection === section2) {
-                window.scrollTo({top:section1.offsetTop, behavior:"smooth"});
-                currentSection = section1;
-            }
+window.addEventListener("wheel", function (event) {
+  if (event.deltaY > 0) {
+    // 휠을 아래로 내린 경우
+    if (currentSection === section1) {
+      window.scrollTo({ top: login.offsetTop, behavior: "smooth" });
+      currentSection = login;
+    } else if (currentSection === login) {
+      window.scrollTo({ top: register.offsetTop, behavior: "smooth" });
+      currentSection = register;
+    }
+  } else {
+    // 휠을 위로 올린 경우
+    if (event.deltaY < 0) {
+      // 휠을 아래로 내린 경우
+      if (currentSection === register) {
+        window.scrollTo({ top: login.offsetTop, behavior: "smooth" });
+        currentSection = login;
+      } else if (currentSection === login) {
+        window.scrollTo({ top: section1.offsetTop, behavior: "smooth" });
+        currentSection = section1;
       }
     }
+  }
 });
 
-
 // scroll - animation 살짝~
-window.addEventListener('scroll', function(){
-    if(section2.getBoundingClientRect().top === 0) {
-        console.log(section2.children); // HTMLCollection(2) [h2, p] 
-        section2.children[0].classList.add('text-animation'); // => h2태그들에 애니메이션 추가
-        section2.children[1].classList.add('text-animation');
-    } else {
-        section2.children[0].classList.remove('text-animation');
-        section2.children[1].classList.remove('text-animation');
-    }
+window.addEventListener("scroll", function () {
+  if (login.getBoundingClientRect().top === 0) {
+    console.log(login.children); // HTMLCollection(2) [h2, p]
+    login.children[0].classList.add("text-animation"); // => h2태그들에 애니메이션 추가
+    login.children[1].classList.add("text-animation");
+  } else {
+    login.children[0].classList.remove("text-animation");
+    login.children[1].classList.remove("text-animation");
+  }
 });

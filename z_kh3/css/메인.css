@@ -1,160 +1,193 @@
 .progress-bar-container {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    width: 100vw;
-    height: 5px;
-    background: #ddd;
-}
-
-.progress-bar {
-    width: 0%;
-    height: 100%;
-    background-color: teal;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 20px;
+  background: #ff5e33;
 }
 
 header {
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #ddd;
+  background-color: antiquewhite;
+  position: fixed;
+  width: 100vw;
+  height: auto;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-header h1 {
-    font-size: 25px;
-    font-weight: bold;
-    margin-left: 20px;
-    line-height: 60px; /*header의 height값과 동일하게 주면 가운데 위치함*/
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90px;
+  text-decoration: none;
 }
 
-haeder nav {
-    margin-right: 20px;
+.logo-container img {
+  width: 150px; /* 원하는 너비 값으로 설정 */
+  height: 100px;
+  padding-top: 30px;
+  margin-right: 10px;
 }
 
-header nav a{
-    margin-left: 35px;
-    text-decoration: none;
-    color: black;
-    line-height: 60px;
-    display: inline-block;
-    /* background-color: aqua; */
-    padding: 0 10px;
+#logo_font {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 60px;
+  padding-top: 30px;
+  color: #ff5e33;
+  font-family: "omyu_pretty";
 }
 
-header nav a:hover {
-    color: tomato;
+.head li {
+  line-height: 40px;
+  display: inline-block;
+  padding: 0 10px;
+  font-family: "omyu_pretty";
+}
+
+.head li a {
+  text-decoration: none;
+  color: black;
+}
+
+.head.bar {
+  display: flex;
+  margin-left: 900px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 200px;
+}
+
+.head.bar li {
+  text-align: 30px;
+  line-height: 40px;
+  padding-right: 3px;
+  font-size: 20px;
+}
+
+.head.menu {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  padding-bottom: 10px;
+}
+.head.menu li {
+  text-align: 50px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 25px;
+  padding-right: 20px;
 }
 
 main {
-    padding-top: 60px;
+  padding-top: 10px;
 }
 
 main section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #mainpage {
+  background-color: white;
+}
+
+main #slide {
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+main #slide img {
+  padding-left: 10px;
+  max-width: 500px;
+  border-radius: 10%;
+}
+
+main #categorize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #f8cdc1;
+  width: 100vw;
+  height: 200px;
+}
+
+main #categorize img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 50px;
 }
 
 main #section1 {
-    background-color: rgb(252, 91, 91);
+  background-color: rgb(238, 200, 200);
 }
 
-main #section2 {
-    background-color: rgb(232, 158, 232);
+main #login {
+  background-color: rgb(231, 187, 231);
 }
 
-main #section3 {
-    background-color: rgb(254, 254, 144);
+main #register {
+  background-color: rgb(236, 236, 138);
 }
 
-main section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+main #category {
+  background-color: rgb(138, 140, 241);
 }
 
-main section p {
-    width: 50%;
-    text-align: center;
-    line-height: 1.4rem;
+main #waiting {
+  background-color: rgb(141, 212, 153);
 }
 
-#top {
-    width: 90px;
-    height: 90px;
-    background-color: black;
-    border-radius: 50%;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-}    
+main #quickreservation {
+  background-color: rgb(221, 147, 147);
+}
+
+main #HOT {
+  background-color: rgb(130, 211, 161);
+}
+
+main #EVENT {
+  background-color: rgb(129, 201, 191);
+}
+
+main #section6 {
+  background-color: rgb(223, 144, 197);
+}
+main #mypage {
+  background-color: rgb(154, 219, 198);
+}
+main #top {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
 
 #top a {
-    text-decoration: none;
-    color: white;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
-
-.text-animation {
-    animation: textAni 1s forwards;
-}
-
-@keyframes textAni {
-    from {
-        opacity: 0;
-        transform: translate(-200px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(0) skew(-20deg);
-    }
-}
-
-
-/* ++ */
-
-#section1 h2 {
-	animation: text-pop-up-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@keyframes text-pop-up-right {
-    0% {
-      transform: translateX(0);
-      transform-origin: 50% 50%;
-      text-shadow: none;
-    }
-    100% {
-      transform: translateX(50px);
-      transform-origin: 50% 50%;
-      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-    }
-  }
-  
-#section2 h2 {
-	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@keyframes focus-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  
