@@ -12,7 +12,7 @@ header {
   background-color: antiquewhite;
   position: fixed;
   width: 100vw;
-  height: auto;
+  height: 180px;
   display: inline-block;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -56,30 +56,35 @@ header {
   color: black;
 }
 
-.head.bar {
+header li a:hover {
+  color: #ff5e33;
+}
+
+.bar {
   display: flex;
-  margin-left: 900px;
   height: 40px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-right: 200px;
+  margin-left: 900px;
 }
 
-.head.bar li {
+.bar li {
   text-align: 30px;
   line-height: 40px;
   padding-right: 3px;
   font-size: 20px;
 }
 
-.head.menu {
+.menu {
   display: flex;
   justify-content: center;
   height: 40px;
-  padding-bottom: 10px;
 }
-.head.menu li {
+
+.menu li {
+  min-width: 100px;
   text-align: 50px;
   height: 40px;
   line-height: 40px;
@@ -103,34 +108,35 @@ main #mainpage {
   background-color: white;
 }
 
-main #slide {
+#slide {
   display: flex;
   justify-content: center;
-  margin-top: 180px;
+  margin-top: 100px;
 }
 
-main #slide img {
+#slide img {
   padding-left: 10px;
-  max-width: 500px;
+  max-width: 800px;
   border-radius: 10%;
 }
 
-main #categorize {
+#categorize {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 10px;
   background-color: #f8cdc1;
   width: 100vw;
   height: 200px;
 }
 
-main #categorize img {
-  width: 150px;
+#categorize img {
+  max-width: 150px;
   height: 150px;
   border-radius: 50%;
   margin-left: 50px;
+  display: block;
 }
 
 main #section1 {
@@ -171,6 +177,7 @@ main #section6 {
 main #mypage {
   background-color: rgb(154, 219, 198);
 }
+
 main #top {
   width: 50px;
   height: 50px;
