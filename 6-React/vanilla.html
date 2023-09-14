@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Total clicks : <span>0</span></h1>
+    <button onclick="setCount()">Click!</button>
+
+    <script>
+      /* 
+      첫번째 방식 
+      const span = document.querySelector("span");
+      const button = document.querySelector("button");
+
+      let counter = 0;
+      const setCount = () => {
+        counter = counter + 1;
+        span.innerHTML = counter;
+      };
+      button.addEventListener("click", setCount);
+      */
+
+      /*
+      두번째 방식
+      const span = document.querySelector("span");
+      const button = document.querySelector("button");
+      const setCount = () => {
+        span.innerHTML = parseInt(span.innerHTML) + 1;
+      };
+      button.addEventListener("click", setCount);
+      */
+
+      /* 세번째 방식 */
+      const span = document.querySelector("span");
+      const setCount = () => {
+        span.innerHTML = parseInt(span.innerHTML) + 1;
+      };
+    </script>
+  </body>
+</html>

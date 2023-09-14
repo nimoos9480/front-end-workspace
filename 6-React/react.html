@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vanilla.html 리액트 방식으로 변환</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let counter = 0;
+      const setCount = () => {
+        counter = counter + 1;
+        console.log(counter); // 클릭 눌를때 숫자 증가 확인 O
+
+        // 클릭할 때마다 다시 리로드 해줘야 화면도 변함(짠코드 다시 호출 or 함수 만들어 호출)
+        const root = document.getElementById("root");
+        const h1 = React.createElement("h1", null, `Total clicks : ${counter}`);
+        const button = React.createElement(
+          "button",
+          { onClick: setCount },
+          "Click!"
+        );
+        const container = React.createElement("div", null, h1, button);
+        ReactDOM.render(container, root);
+      };
+
+      const root = document.getElementById("root");
+      const h1 = React.createElement("h1", null, `Total clicks : ${counter}`); // 태그, 속성, 내용
+      const button = React.createElement(
+        "button",
+        { onClick: setCount },
+        "Click!"
+      );
+      const container = React.createElement("div", null, h1, button);
+      ReactDOM.render(container, root);
+    </script>
+  </body>
+</html>

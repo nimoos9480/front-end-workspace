@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 페이스북에서 개발한 JavaScript 라이브러리로, 사용자 인터페이스를 만들기 위한 도구
+- 컴포넌트 기반으로 동작하며, 높은 재사용성과 확장성을 가지고 있음
 
-## Available Scripts
+## 주요 특징
 
-In the project directory, you can run:
+1. 가상 DOM(Virtual DOM) : 리액트는 가상 DOM을 사용하여 브라우저의 실제 DOM과 상호작용. 즉, 전체 DOM을 그리는 대신 변경된 부분만 업데이트
+2. 단방향 데이터 흐름 : 데이터 흐름이 컴포넌트 계층 구조에서 위에서 아래로 흐른다. 데이터의 상태변화를 추적하는데 쉬워진다.
+3. 컴포넌트 기반 : 재사용 가능한 컴포넌트로 구성. 각 컴포넌트는 상태(state)와 생명주기(lifecycle)을 가진다.
+4. JSX(JavaScriptXML) : React에서는 JSX 문법을 사용하여 컴포넌트의 UI 정의. 자바스크립트의 확장 문법으로 HTML과 유사한 구조를 가지고 있다.
 
-### `npm start`
+## Create React App 프로젝트 구조
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- node_modules 폴더 : 프로젝트에서 사용하는 모든 패키지들이 들어있는 폴더
+- public 폴더 : 정적 파일(이미지, 폰트 등)이 들어있는 폴더
+- **src 폴더** : 리액트 앱의 모든 소스 코드가 들어있는 폴더
+- package-lock.json : 프로젝트에 사용되는 패키지들의 의존성 정보가 저장되어 있는 파일
+- **package.json** : 프로젝트의 설정 파일. 프로젝트에 사용되는 패키지들과 스크립트들이 정의
