@@ -43,6 +43,10 @@ header * {
   justify-content: flex-end; /*우측 정렬*/
 }
 
+.header-center input {
+  display: none;
+}
+
 .header-center button {
   background: none;
   border: none;
@@ -65,10 +69,6 @@ header * {
 
 .header-end button i {
   margin-right: 5px;
-}
-
-.header-center input {
-  display: none;
 }
 
 main {
