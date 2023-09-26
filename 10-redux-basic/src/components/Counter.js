@@ -47,4 +47,20 @@ const Counter = () => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  // 카운터의 initialState로 지정한 counter
+  counter: state.counter.counter,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  increase: () => {
+    console.log("increase");
+    dispatch(increase());
+  },
+  decrease: () => {
+    console.log("decrease");
+    dispatch(decrease());
+  },
+});
+
 export default Counter;
