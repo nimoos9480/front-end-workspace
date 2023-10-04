@@ -1,124 +1,125 @@
 /* 1. 전체 선택자 */
 * {
-    color: blue;
+  color: blue;
 }
 
 /* 2. 태그 선택자 */
 h3 {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 p {
-    color: tomato;
+  color: tomato;
 }
 
 /* 3. 클래스 선택자*/
 .class1 {
-    color: yellowgreen;
+  color: yellowgreen;
 }
 .class2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 /* 4. 아이디 선택자*/
 #id1 {
-    color: orange;
+  color: orange;
 }
 
 /* 5. 그룹 선택자*/
-#select1, #select2 {
-    background-color: blanchedalmond;
+#select1,
+#select2 {
+  background-color: blanchedalmond;
 }
 
 /* 6. 자식선택자와 자손선택자*/
 #test1 > * {
-    background-color: pink;
+  background-color: pink;
 }
 
 #test1 li {
-    color: red;
+  color: red;
 }
 
 #test1 > ul > li {
-    background-color: darkcyan;
+  background-color: darkcyan;
 }
 
 /* 7.속성 선택자*/
 /* div 요소들 중 name 속성값이 name1과 "일치"하는 요소 (배경색 : orangered)*/
-div[name=name1] {
-    background-color: orangered;
+div[name="name1"] {
+  background-color: orangered;
 }
 
 /* div 요소들 중 class 속성값에 -c가 "포함"되어 있는 경우 (글자색 : red)*/
-div[class*=-c] {
-    color: red;
+div[class*="-c"] {
+  color: red;
 }
 
 /* div 요소들 중 name 속성값이 na로 "시작"하는 요소 (배경색 : blue)*/
-div[name^=na] {
-    background-color: skyblue;
+div[name^="na"] {
+  background-color: skyblue;
 }
 /* div 요소들 중 class 속성값이 ss로 "끝"나는 요소 (글자색 : white)*/
-div[class$=ss] {
-    color: white;
+div[class$="ss"] {
+  color: white;
 }
 
 /* 8. 형제 선택자*/
-#test2+div {
-    background-color: yellow;
+#test2 + div {
+  background-color: yellow;
 }
 
-#test2+ul {
-    background-color: pink;
+#test2 + ul {
+  background-color: pink;
 }
 
-#test2~div {
-    background-color: beige;
+#test2 ~ div {
+  background-color: beige;
 }
 
-#test2~ul {
-    background-color: hotpink;
+#test2 ~ ul {
+  background-color: hotpink;
 }
 
 /* 9. 반응 선택자 */
 .area {
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
 }
 
 #active-test:active {
-    background-color: yellow;
-    color: red;
+  background-color: yellow;
+  color: red;
 }
 
 #hover-test:hover {
-    background-color: maroon;
-    color: white;
+  background-color: maroon;
+  color: white;
 }
 
 /* input의 name이 user로 시작하는 선택자*/
-input[name^=user]:focus {
-    background-color: pink;
+input[name^="user"]:focus {
+  background-color: pink;
 }
 
 /* 10. 상태 선택자 */
-input[type=checkbox]:checked {
-    width: 20px;
-    height: 20px;
+input[type="checkbox"]:checked {
+  width: 20px;
+  height: 20px;
 }
 
 /* int checkbox 선택자 옆에 있는 label (체크된 상태만)*/
-input[type=checkbox]:checked + label {
-    font-size: 20px;
+input[type="checkbox"]:checked + label {
+  font-size: 20px;
 }
 
 /*클릭 가능할 때*/
 button:enabled {
-    background-color: violet;
+  background-color: violet;
 }
 
 /*클릭 불가능할 때*/
-button:disabled{
-    background-color: yellowgreen;
+button:disabled {
+  background-color: yellowgreen;
 }
